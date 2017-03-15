@@ -1,0 +1,45 @@
+
+<div *ngIf="timeTrack">
+    <h2><span jhiTranslate="timetrackApp.timeTrack.detail.title">Time Track</span> {{timeTrack.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="timetrackApp.timeTrack.name">Name</span></dt>
+        <dd>
+            <span>{{timeTrack.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="timetrackApp.timeTrack.timeFrom">Time From</span></dt>
+        <dd>
+            <span>{{timeTrack.timeFrom | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="timetrackApp.timeTrack.timeTo">Time To</span></dt>
+        <dd>
+            <span>{{timeTrack.timeTo | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="timetrackApp.timeTrack.project">Project</span></dt>
+        <dd>
+            <div *ngIf="timeTrack.project">
+                <a [routerLink]="['/project', timeTrack.project?.id]">{{timeTrack.project?.name}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="timetrackApp.timeTrack.employee">Employee</span></dt>
+        <dd>
+            <div *ngIf="timeTrack.employee">
+                <a [routerLink]="['/employee', timeTrack.employee?.id]">{{timeTrack.employee?.firstname}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'time-track/'+ timeTrack.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

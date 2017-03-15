@@ -1,0 +1,27 @@
+{
+    "timetrackApp": {
+        "employee" : {
+            "home": {
+                "title": "Employees",
+                "createLabel": "Employee erstellen",
+                "createOrEditLabel": "Employee erstellen oder bearbeiten"
+            },
+            "created": "Employee erstellt mit ID {{ param }}",
+            "updated": "Employee aktualisiert mit ID {{ param }}",
+            "deleted": "Employee gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Employee {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Employee"
+            },
+            "firstname": "Firstname",
+            "lastname": "Lastname",
+            "email": "Email",
+            "phonenumber": "Phonenumber",
+            "salary": "Salary",
+            "user": "User",
+            "timetrack": "Timetrack"
+        }
+    }
+}

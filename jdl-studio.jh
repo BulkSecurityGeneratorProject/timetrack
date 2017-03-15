@@ -1,0 +1,29 @@
+entity Employee {
+	firstname String required,
+    lastname String required,
+    email String,
+    phonenumber String,
+    salary Long
+}
+
+entity Project {
+	name String required minlength(2),
+    description String required minlength(2)
+}
+
+entity TimeTrack {
+	name String required,
+    timeFrom ZonedDateTime required,
+    timeTo ZonedDateTime required
+}
+
+relationship OneToOne {
+	Employee{user(login)} to User
+}
+
+relationship ManyToOne {
+    TimeTrack{project(name)} to Project{timetrack(name)},
+    TimeTrack{employee(firstname)} to Employee{timetrack(name)}
+}
+
+

@@ -1,0 +1,25 @@
+{
+    "timetrackApp": {
+        "timeTrack" : {
+            "home": {
+                "title": "Time Tracks",
+                "createLabel": "Create a new Time Track",
+                "createOrEditLabel": "Create or edit a Time Track"
+            },
+            "created": "A new Time Track is created with identifier {{ param }}",
+            "updated": "A Time Track is updated with identifier {{ param }}",
+            "deleted": "A Time Track is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Time Track {{ id }}?"
+            },
+            "detail": {
+                "title": "Time Track"
+            },
+            "name": "Name",
+            "timeFrom": "Time From",
+            "timeTo": "Time To",
+            "project": "Project",
+            "employee": "Employee"
+        }
+    }
+}
